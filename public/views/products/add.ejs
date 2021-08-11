@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Registro de Productos</h1>
+    <div>
+        <form action="/products/add" method="POST">
+            <label for="name">Nombre:</label> <br>
+            <input type="text" name="name" autofocus required> <br>
+            <label for="description">Descripción:</label> <br>
+            <input type="text" name="description" required> <br>
+            <label for="category_id">Categoria: </label> <br>
+            <select name="category_id" id="" value="Elige Categoria">
+                <% for(let i = 0; i < h.length; i++){ %>
+                    <option value="<%= h[i].id %>"><%= h[i].name %> </option>
+                <% } %>
+            </select> <br> <br>
+            <button>
+                Registrar Producto
+            </button>
+        </form>
+    </div>
+    <br>
+    <a href="/products">Ver productos</a>
+    <%#= h %> 
+
+      <%# for(let item in h){ %>
+            <%#= h[item].id %>
+     <%# } %>
+     
+   
+</body>
+</html>
