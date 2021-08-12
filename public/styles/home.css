@@ -1,6 +1,21 @@
 body{
     background-color:#000;
+    margin:0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
-h1{
+  
+.informative-banner{
+    text-align: center;
+    background-color: rgb(22, 106, 175);
+  }
+  
+  .informative-banner p{
+    margin: 0px ;
+    padding: 15px;
+    font-size: 18px;
     color: #fff;
-}
+  }
+ .banner img{
+     width: 100%;
+     height: 900px;
+ }

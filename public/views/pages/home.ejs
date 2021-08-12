@@ -7,17 +7,47 @@
     <title>Document</title>
     <link rel="stylesheet" href="../../styles/home.css">
 </head>
+<style>
+    .menu__list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    font-size: 22px;
+  }
+  
+.menu__list--item {
+    float: right;
+  }
+  
+.menu__list--item a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+.menu__list--item a:hover:not(.active) {
+    background-color: #111;
+  }
+  
+</style>
 <body>
-    <h1>Inventario</h1>
-    <a href="/products/">
-        <button>
-            Productos
-        </button>
-    </a>
-    <a href="/category">
-        <button>
-            Categoria
-        </button>
-    </a>
+    <div class="menu">
+    <ul class="menu__list">
+        <li class="menu__list--item"><a href="/">Inicio</a></li>
+        <li class="menu__list--item"><a href="/category">Categorias</a></li>
+        <li class="menu__list--item"><a href="/products/">Productos</a></li>
+      
+    </ul>
+    </div>
+    <div class="informative-banner">
+        <p>Esta para llevar el inventariado de equipos</p>
+    </div>
+    <div class="banner">
+        <img src="../../images/inventory.jpg" alt="">
+    </div>
 </body>
 </html>

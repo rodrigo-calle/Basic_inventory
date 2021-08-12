@@ -5,10 +5,54 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-</head>
+    <link rel="stylesheet" href="../../styles/editproducts.css">
+</head><style>
+
+    body{
+        
+        margin:0;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    .menu__list {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+        font-size: 22px;
+    }
+
+    .menu__list--item {
+        float: right;
+    }
+
+    .menu__list--item a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+    .menu__list--item a:hover:not(.active) {
+        background-color: #111;
+    }
+</style>
+
 <body>
-    <h1>Editar productos de Productos</h1>
-    <div>
+    <div class="menu">
+        <ul class="menu__list">
+            <li class="menu__list--item"><a href="/">Inicio</a></li>
+            <li class="menu__list--item"><a href="/category">Categorias</a></li>
+            <li class="menu__list--item"><a href="/products/">Productos</a></li>
+
+        </ul>
+    </div>
+
+
+    <h1 class="title">Editar producto : <span style="color: #28cdff;"><%= product.name %></span> </h1>
+
+    <div class="form-container">
         <form action="/products/edit/<%= product.id %>" method="POST">
             <label for="name">Nombre:</label> <br>
             <input type="text" name="name" value="<%= product.name %>"  autofocus required > <br>
@@ -25,6 +69,14 @@
             </button>
         </form>
     </div>
-    <a href="/products">Ver productos</a>
+
+    <div  class="group-buttons">
+        <a href="/products">
+            <button>
+                Ver productos
+            </button> 
+        </a> 
+    </div>
+   
 </body>
 </html>
